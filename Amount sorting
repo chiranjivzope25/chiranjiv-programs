@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+void sorting(int amt[],int n){
+   for(int i=0; i<n;i++){
+       for(int j=0; j<n-i-1;j++){
+           if(amt[j]>amt[j+1]){
+               swap(amt[j],amt[j+1]);
+           }
+  }
+}
+for(int i=0;i<n;i++){
+      printf("Price of %d laptop is :%d\n",i+1,amt[i]);
+  } 
+}
+
+int main() {
+     int n;
+     char name[60],processor[60];
+    int ram,SSD,amt[n];
+
+   
+    printf("Enter the number of laptops\n");
+    scanf("%d",&n);
+    printf("Enter the details of laptops\n");
+    for(int i=0;i<n;i++){
+    printf("Enter the name of %d laptop\n",i+1);
+    scanf("%s",name);
+    printf("Enter the procesor\n");
+    scanf("%s",processor);
+    printf("Enter the Ram\n");
+    scanf("%d",&ram);
+    printf("Enter the SSD\n");
+    scanf("%d",&SSD);
+     printf("Enter the amount of laptop\n");
+    scanf("%d",&amt[i]);
+}
+sorting(amt,n);
+
+   return 0;
+}
