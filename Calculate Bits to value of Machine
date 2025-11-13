@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int calval(intx, int n){
+    if(n == 0){
+    return 1;
+} else{
+     return x*calval(x,n-1);
+     
+}
+    
+}
+int main() {
+    int x=2,n;
+  
+    
+    printf("Enter the  no of  bits of Machine  \n");
+    scanf(" %d",&n);
+ int result=calval(x,n);
+ printf("The number of unique  values represented by Machine  is  : %d\n",result);
+
+    return 0;
+}
