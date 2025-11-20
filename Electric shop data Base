@@ -1,0 +1,126 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+int z=6;
+
+struct find{
+    int no;
+    char proname[40];
+    int mrp;
+};
+
+int main() {
+ struct find f[100];
+     f[0].no = 1;
+       strcpy(f[0].proname , "Wire");
+      f[0].mrp = 100;
+      
+      f[1].no = 2;
+       strcpy(f[1].proname , "cable");
+      f[1].mrp = 300;
+      
+      f[2].no = 3;
+       strcpy(f[2].proname , "tester");
+      f[2].mrp = 500;
+      
+      f[3].no = 4;
+       strcpy(f[2].proname , "switch");
+      f[3].mrp = 600;
+      
+      f[4].no = 5;
+      strcpy(f[3].proname , "plug");
+      f[4].mrp = 800;
+      
+      f[5].no = 6;
+       strcpy(f[4].proname , "electricboard");
+      f[5].mrp = 900;
+printf("####################################################################################\n");     
+printf("                  WELCOME TO CHIRAG ELECTRONICS\n");
+printf("####################################################################################\n");     
+    
+for( int j = 0; j<= 100 ;j++){
+    int e;
+    printf( " 1: To search   \n 2: To add Enter  \n 3: To get product list \n Now we have %d products in our list\n ",z);
+    printf("####################################################################################\n");     
+
+    scanf("%d",&e);
+    switch(e){
+        case 1: 
+             int target;
+              printf(" Enter the sr no of product  you want to find \n");
+              scanf("%d",&target);
+              
+              int a=0;
+                 for(int i= 0; i<z;i++){
+                      if(f[i].no == target){
+                         a=1;
+                          
+                        printf("####################################################################################\n");  
+                            printf("Product information is \n");
+
+
+                         printf("SR NO : %d\n",f[i].no);
+                        printf("Product Name : %s\n",f[i].proname);
+                         printf("Price : %d\n",f[i].mrp);
+                        }
+                    }
+                    if(a==1){
+                     printf("Product found\n");
+                     printf("####################################################################################\n");     
+
+                     break;
+                    }
+                     else{
+                     printf("Product  not found\n");
+                     printf("####################################################################################\n");     
+
+                      break;
+                    }
+         break;
+
+        case 2:      
+             
+                   int p;
+                  char proname[40];
+                  printf("Enter number of products you want to add\n");
+                  scanf("%d",&p);
+                  printf("####################################################################################\n"); 
+                 for(int i= 1; i<=p;i++){
+                        printf("Enter product information \n");
+                      printf("Enter product number \n");
+                      scanf("%d",&f[i].no);
+                      printf("Enter product name \n");
+                       scanf("%s",proname);
+                     strcpy(f[i].proname , proname);
+                     printf("Enter product price \n");
+                     scanf("%d",&f[i].mrp);
+                     z++;
+                      printf("####################################################################################\n"); 
+                     }
+                     printf(" your Product is added Succesfully\n");
+                      printf("####################################################################################\n"); 
+               break;
+        case 3:  
+         printf("Product information is listed below\n");
+                for(int i= 0; i<z;i++){
+                     
+                     
+                     printf("####################################################################################\n"); 
+                     
+
+                     printf("SR NO : %d\n",f[i].no);
+                     printf("Product Name : %s\n",f[i].proname);
+                     printf("Price : %d\n",f[i].mrp);
+                    }
+                    printf("####################################################################################\n"); 
+                    
+                
+               break;
+
+    }
+}
+    
+    
+    return 0;
+}
+
